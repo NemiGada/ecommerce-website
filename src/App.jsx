@@ -12,7 +12,7 @@ import './App.css';
 function App() {
   return (
     <Provider store={store}>
-      <Router basename="/ecommerce-website">
+      <Router basename="/">
         <div className="app-container">
           <Header />
           <main className="main-content">
