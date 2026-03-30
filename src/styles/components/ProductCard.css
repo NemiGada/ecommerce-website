@@ -1,0 +1,210 @@
+/* ProductCard Component Styles - Dark & Gold Theme */
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card {
+  background: var(--surface-color);
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: var(--shadow);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  background: linear-gradient(135deg, #3d3d3d 0%, #2d2d2d 100%);
+  transition: background 0.3s ease;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.product-card:hover .product-image {
+  background: linear-gradient(135deg, #4a4a4a 0%, #333333 100%);
+}
+
+.product-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  line-height: 1.4;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.add-to-cart-btn {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: var(--background-color);
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.add-to-cart-btn:hover {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+  transform: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.add-to-cart-btn:hover {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+  transform: none;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Quantity Control Styles - appears when item is in cart */
+.quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--surface-color) 0%, var(--surface-color-light) 100%);
+  padding: 0.45rem 0.55rem;
+  border-radius: 0.375rem;
+  margin-top: auto;
+  border: 1px solid rgba(241, 196, 15, 0.7);
+}
+
+.qty-btn {
+  background: var(--primary-color);
+  color: var(--background-color);
+  border: 1px solid transparent;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.25rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: var(--shadow);
+}
+
+.qty-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+.qty-btn:active {
+  transform: translateY(1px);
+}
+
+.qty-display {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.05rem;
+  min-width: 2rem;
+  text-align: center;
+}
+
+/* Remove comment wrapper from old block if exists */
+
+@media (max-width: 768px) {
+  .product-card {
+    flex-direction: row;
+    height: auto;
+  }
+
+  .product-image {
+    width: 150px;
+    min-width: 150px;
+    height: 150px;
+    border-bottom: none;
+    border-right: 2px solid var(--primary-color);
+  }
+
+  .product-info {
+    padding: 1rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-image {
+    height: 150px;
+    font-size: 3rem;
+  }
+
+  .product-info {
+    padding: 1rem;
+  }
+
+  .product-name {
+    font-size: 0.95rem;
+  }
+
+  .product-price {
+    font-size: 1.1rem;
+  }
+
+  .add-to-cart-btn {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-image {
+    height: 120px;
+    font-size: 2.5rem;
+  }
+
+  .product-info {
+    padding: 0.75rem;
+  }
+
+  .product-name {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .product-price {
+    font-size: 1rem;
+  }
+
+  .product-stock {
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .add-to-cart-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+}
